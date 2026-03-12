@@ -188,6 +188,7 @@ def split_to_json_objects(extracted_data):
     ap_manual_entries = {
         "acsEnable": "0",
         "wirelessDeviceCountryCode": "OT",
+        "networkBridgeIPAddressMode": "1",
         "networkBridgeMTU": "1700",
         "mgmtVLANEnable": "1",
         "mgmtVLANVP": "5",
@@ -222,6 +223,7 @@ def split_to_json_objects(extracted_data):
 
     # Manual entries for SM
     sm_manual_entries = {
+        "networkBridgeIPAddressMode": "1",
         "networkBridgeMTU": "1700",
         "mgmtVLANEnable": "1",
         "mgmtVLANVP": "5",
@@ -384,3 +386,4 @@ if uploaded_files:
                 mime="application/json",
                 disabled=True
             )
+

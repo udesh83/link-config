@@ -12,7 +12,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 USERNAME = "admin"
-PASSWORD = "Di1log@2B"
+PASSWORD = "cambium@12345"
 
 
 def login():

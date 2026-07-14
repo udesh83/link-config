@@ -215,6 +215,7 @@ def split_to_json_objects(extracted_data):
             {"snmpTrapEntryIP": "10.58.16.160", "snmpTrapEntryPort": "161"},
             {"snmpTrapEntryIP": "10.58.16.168", "snmpTrapEntryPort": "161"}
         ],
+        "syslogServerIPFourth":	"192.168.1.1",
         "networkBridgeIPAddr": "",
         "networkBridgeGatewayIP": "",
         "networkBridgeNetmask": "",
@@ -246,6 +247,7 @@ def split_to_json_objects(extracted_data):
             {"snmpTrapEntryIP": "10.58.16.160", "snmpTrapEntryPort": "161"},
             {"snmpTrapEntryIP": "10.58.16.168", "snmpTrapEntryPort": "161"}
         ],
+        "syslogServerIPFourth":	"192.168.1.1",
         "networkBridgeIPAddr": "",
         "networkBridgeGatewayIP": "",
         "networkBridgeNetmask": "",

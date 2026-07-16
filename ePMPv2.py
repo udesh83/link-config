@@ -50,6 +50,16 @@ channel_bandwidth_mapping = {
     "5": "8"
 }
 
+# -----------------------------
+# 🔹 HT Mode Mapping
+# -----------------------------
+ht_mode_mapping = {
+    "20": "1",
+    "40": "2",
+    "10": "3",
+    "5": "4"
+}
+
 # Preview mapping for display only
 
 
@@ -290,10 +300,27 @@ def split_to_json_objects(extracted_data):
 
     ap_json["snmpSystemDescription"] = ap_json.get("snmpSystemName", "")
     sm_json["snmpSystemDescription"] = sm_json.get("snmpSystemName", "")
-    ap_json["wirelessInterfaceHTMode"] = ap_json.get("wirelessInterfaceScanFrequencyBandwidth", "")
+    
 
     apply_scan_frequency_lists_sm(sm_json)
     add_preferred_ap_table(sm_json)
+
+    reverse_bandwidth_mapping = {
+        "1": "20",
+        "2": "40",
+        "4": "10",
+        "8": "5"
+
+    }
+    original_bandwidth = reverse_bandwidth_mapping.get(
+        ap_json.get("wirelessInterfaceScanFrequencyBandwidth", ""),
+        ""
+    )
+
+    ap_json["wirelessInterfaceHTMode"] = ht_mode_mapping.get(
+        original_bandwidth, "")    
+
+    
 
     return ap_json, sm_json
 

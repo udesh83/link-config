@@ -290,6 +290,7 @@ def split_to_json_objects(extracted_data):
 
     ap_json["snmpSystemDescription"] = ap_json.get("snmpSystemName", "")
     sm_json["snmpSystemDescription"] = sm_json.get("snmpSystemName", "")
+    ap_json["wirelessInterfaceHTMode"] = ap_json.get("wirelessInterfaceScanFrequencyBandwidth", "")
 
     apply_scan_frequency_lists_sm(sm_json)
     add_preferred_ap_table(sm_json)
